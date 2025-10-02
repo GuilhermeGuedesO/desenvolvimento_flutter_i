@@ -1,22 +1,23 @@
-import 'package:desenvolvimento_flutter_i/models/pessoa.dart';
-import 'package:desenvolvimento_flutter_i/widgets/pessoa_listtile.dart';
-import 'package:desenvolvimento_flutter_i/widgets/stateless_widget.dart';
+import 'package:desenvolvimento_flutter_i/widgets/listview_builder.dart';
 import 'package:flutter/material.dart';
+
+
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Hello Flutter')),
-        body: PessoaListtile(pessoa: Pessoa(1, "Guilherme", 178, 109),),
+        appBar: AppBar(backgroundColor: Colors.amber,
+            title: Text('Hello Flutter')),
+        body: ListaPessoas(),
       ),
     );
   }
 }
-

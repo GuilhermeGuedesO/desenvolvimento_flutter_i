@@ -16,25 +16,34 @@ class _MeuStatelessWidgetState extends State<MeuStatelessWidget> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text("Count = $count",style: TextStyle(fontSize: 24,color: Colors.amber),),
-        ],
-      ),
-        SizedBox(height: 24,),
-        ElevatedButton(onPressed: () {
-
-          setState(() {
-            count++;
-          });
-        },
-          child: Text("Clique aqui!"),),
-        MeuStateFull(callback: (){setState(() {
-          count--;
-        });} ,)],
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "Count = $count",
+              style: TextStyle(fontSize: 24, color: Colors.amber),
+            ),
+          ],
+        ),
+        SizedBox(height: 24),
+        ElevatedButton(
+          onPressed: () {
+            setState(() {
+              count++;
+            });
+          },
+          child: Text("Clique aqui!"),
+        ),
+        MeuStateFull(
+          callback: () {
+            setState(() {
+              count--;
+            });
+          },
+        ),
+      ],
     );
   }
-
 }
